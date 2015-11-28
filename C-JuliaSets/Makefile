@@ -1,9 +1,9 @@
-all: test_cplane
+all: julia
 
-test_cplane: cplane.o
+julia: cplane.o complex.o
 
 run: all
-	./test_cplane
+	./julia
 
 clean:
-	rm -f test_cplane cplane.o
+	rm -f julia cplane.o complex.o

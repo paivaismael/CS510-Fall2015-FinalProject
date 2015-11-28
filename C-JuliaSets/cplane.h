@@ -17,7 +17,9 @@ CPLANE new_cplane(const INT, const INT);
 void delete_cplane(CPLANE);
 // Getter for individual elements
 COMPLEX get(const CPLANE *, const INT, const INT);
-// Setter an appropriated cplane
+// Setter appropriate cplanes
+void set(CPLANE *, const VALUE, const VALUE, const VALUE, const VALUE);
+// Constructor that tests some conditions and calls set function
 CPLANE constructor(const VALUE, const VALUE, const VALUE, const VALUE, const INT, const INT);
 // Abstraction layer for printing matrices
 void print_cplane(const CPLANE *);
