@@ -1,0 +1,47 @@
+"#!/usr/bin/python # Standard command line to start python script. '!/usr/bin/python' is the local Python's address.\n\n# Imports libraries\nimport sys # Necessary library to receive inputs from a terminal command line\nimport numpy as np # Math library\nimport pandas as pd # Math library\nimport matplotlib # Matplotlib plotting library\nmatplotlib.use('Agg') # Matplotlib plotting library\nimport matplotlib.pyplot as plt # Matplotlib plotting library\n\n# Beginning of the script operations\nd = pd.read_csv(sys.argv[1]) # Reads the csv file informed as the second argument on the terminal command line\nfigure = str(sys.argv[1])[:-3] + \"jpg\" # Defines the name of the output jpg file from the name of the input csv file\nsizex=d[' y'][d[' y']==max(d[' y'])].count() # Defines the number of no repeated elements in d['x'], which is the same as the number of times a single element is repeated in d[' y']\nsizey=d['x'][d['x']==max(d['x'])].count() # Defines the number of no repeated elements in d[' y'], as done for sizex before\nx=np.reshape(d['x'],(sizex,sizex))[0,:].transpose() # Creates a numpy array with no repeated elements of d['x']\ny=np.reshape(d[' y'],(sizey,sizey))[:,0] # Creates a numpy array with no repeated elements of d[' y']\nz=np.reshape(d[' out'],(sizey,sizex)) # Creates an appropriated matrix version of d[' out']\nplt.pcolormesh(x,y,z, cmap = plt.cm.hot) # Plots the treated version of the received data\nplt.colorbar() # Includes colorbar to the plot\nplt.savefig(figure) # Saves the plot to an external file with the name saved in the string 'figure'"
+{"patch":[[[[0," string "],[-1,"'"],[0,"figure'"]],1544,1544,16,15]],"time":1450114168031}
+{"patch":[[[[0,"g figure"],[-1,"'"]],1550,1550,9,8]],"time":1450114166019}
+{"patch":[[[[0,"tring figure"],[1,"\n"]],1546,1546,12,13]],"time":1450113410433}
+{"patch":[[[[0,"thon"],[-1," # Standard command line to start python script. '!/usr/bin/python' is the local Python's address.\n\n# Imports libraries\nimport sys # Necessary library to receive inputs from a terminal command line"],[1,"\n\nimport sys"],[0,"\nimp"]],13,13,205,20],[[[0,"py as np"],[-1," # Math library"],[0,"\nimport "]],40,40,31,16],[[[0,"s pd"],[-1," # Math library"],[0,"\nimp"]],64,64,23,8],[[[0,"tlib"],[-1," # Matplotlib plotting library\nmatplotlib.use('Agg') # Matplotlib plotting library\nimport matplotlib.pyplot as plt # Matplotlib plotting library\n\n# Beginning of the script operations\nd = pd.read_csv(sys.argv[1]) # Reads the csv file informed as the second argument on the terminal command line\nfigure = str(sys.argv[1])[:-3] + \"jpg\" # Defines the name of the output jpg file from the name of the input csv file\nsizex=d[' y'][d[' y']==max(d[' y'])].count() # Defines the number of no repeated elements in d['x'], which is the same as the number of times a single element is repeated in d[' y']\nsizey=d['x'][d['x']==max(d['x'])].count() # Defines the number of no repeated elements in d[' y'], as done for sizex before\nx=np.reshape(d['x'],(sizex,sizex))[0,:].transpose() # Creates a numpy array with no repeated elements of d['x']\ny=np.reshape(d[' y'],(sizey,sizey))[:,0] # Creates a numpy array with no repeated elements of d[' y']\nz=np.reshape(d[' out'],(sizey,sizex)) # Creates an appropriated matrix version of d[' out']\nplt.pcolormesh(x,y,z, cmap = plt.cm.hot) # Plots the treated version of the received data\nplt.colorbar() # Includes colorbar to the plot\nplt.savefig(figure) # Saves the plot to an external file with the name saved in the string figure\n"],[1,"\nmatplotlib.use('Agg')\nimport matplotlib.pyplot as plt\n\nd = pd.read_csv(sys.argv[1])\nsizex=d[' y'][d[' y']==max(d[' y'])].count()\nsizey=d['x'][d['x']==max(d['x'])].count()\nx=np.reshape(d['x'],(sizex,sizex))[0,:].transpose()\ny=np.reshape(d[' y'],(sizey,sizey))[:,0]\nz=np.reshape(d[' out'],(sizey,sizex))\nfigure = str(sys.argv[1])[:-3] + \"jpg\"\nplt.pcolormesh(x,y,z, cmap = plt.cm.hot)\nplt.colorbar()\nplt.savefig(figure)"]],82,82,1262,421]],"time":1450113205687}
+{"patch":[[[[0,"(figure)"],[1,"\n"]],495,495,8,9]],"time":1450023137536}
+{"patch":[[[[0,"1])\n"],[-1,"sizex=d[' y'][d[' y']==max(d[' y'])].count()"],[0,"\nsiz"]],167,167,52,8]],"time":1450023093399}
+{"patch":[[[[0,"rgv[1])\n"],[-1,"\n"],[0,"sizey=d["]],163,163,17,16]],"time":1450023091400}
+{"patch":[[[[0,"count()\n"],[1,"\n"],[0,"x=np.res"]],205,205,16,17]],"time":1450023089402}
+{"patch":[[[[0,"count()\n"],[1,"sizex=d[' y'][d[' y']==max(d[' y'])].count()"],[0,"\nx=np.re"]],205,205,16,60]],"time":1450023085876}
+{"patch":[[[[0,"t()\nsize"],[-1,"x"],[0,"=d[' y']"]],209,209,17,16]],"time":1450023076903}
+{"patch":[[[[0,"t()\nsize"],[1,"y"],[0,"=d[' y']"]],209,209,16,17]],"time":1450023074905}
+{"patch":[[[[0,"rgv[1])\nsize"],[-1,"y"],[0,"=d['x'][d['x"]],163,163,25,24]],"time":1450023072903}
+{"patch":[[[[0,"1])\nsize"],[1,"x"],[0,"=d['x']["]],167,167,16,17]],"time":1450023070956}
+{"patch":[[[[0,"s as pd\n"],[1,"\n"],[0,"import m"]],61,61,16,17]],"time":1450022974479}
+{"patch":[[[[0,"s as pd\n"],[1,"from math import sqrt"],[0,"\nimport "]],61,61,16,37]],"time":1450022972476}
+{"patch":[[[[0,"size"],[-1,"x=d['x'][d['x']==max(d['x'])].count()\nsizey=d[' y'][d[' y']==max(d[' y'])].count("],[1,"=int(sqrt(d.shape[0])"],[0,")\nx="]],193,193,89,29],[[[0,"size"],[-1,"x"],[0,",size"],[-1,"x"],[0,"))[0"]],241,241,15,13],[[[0,"size"],[-1,"y"],[0,",size"],[-1,"y"],[0,"))"],[-1,"[:,0]"],[1,".transpose()[0,:].transpose()"],[0,"\nz=n"]],292,292,22,44],[[[0,"size"],[-1,"y"],[0,",size"],[-1,"x"],[0,"))\nf"]],357,357,15,13]],"time":1450022949140}
+{"patch":[[[[0," pd\n"],[-1,"from math import sqrt"],[0,"\nimp"]],65,65,29,8]],"time":1449988908409}
+{"patch":[[[[0,"s as pd\n"],[-1,"\n"],[0,"import m"]],61,61,17,16]],"time":1449988905867}
+{"patch":[[[[0,"cm.hot)\n"],[1,"\n"],[0,"plt.colo"]],419,419,16,17]],"time":1449988846577}
+{"patch":[[[[0,"cm.hot)\n"],[1,"plt.pcolor(d, cmap = plt.cm.hot)"],[0,"\nplt.col"]],419,419,16,48]],"time":1449988763016}
+{"patch":[[[[0,"plt.cm.hot)\n"],[1,"plt.figure(1, figsize = (12, 9))\n"],[0,"plt.pcolor(d"]],415,415,24,57]],"time":1449988756212}
+{"patch":[[[[0,"pg\"\n"],[-1,"plt.pcolormesh(x,y,z, cmap = plt.cm.hot)"],[0,"\nplt"]],382,382,48,8]],"time":1449988754304}
+{"patch":[[[[0,"+ \"jpg\"\n"],[-1,"\n"],[0,"plt.figu"]],378,378,17,16]],"time":1449988752068}
+{"patch":[[[[0,"]))\n"],[-1,"x=np.reshape(d['x'],(size,size))[0,:].transpose()\ny=np.reshape(d[' y'],(size,size)).transpose()[0,:].transpose()\nz=np.reshape(d[' out'],(size,size))"],[0,"\nfig"]],194,194,156,8]],"time":1449988728672}
+{"patch":[[[[0,"pe[0]))\n"],[-1,"\n"],[0,"figure ="]],190,190,17,16]],"time":1449988718268}
+{"patch":[[[[0,"1])\n"],[-1,"size=int(sqrt(d.shape[0]))"],[0,"\nfig"]],167,167,34,8]],"time":1449988712508}
+{"patch":[[[[0,"cm.hot)\n"],[1,"\n"],[0,"plt.colo"]],269,269,16,17]],"time":1449984606271}
+{"patch":[[[[0,"cm.hot)\n"],[1,"#plt.axis([d['x'].min(), d['x'].max(), d[' y'].min(), d[' y'].max()])"],[0,"\nplt.col"]],269,269,16,85]],"time":1449984604278}
+{"patch":[[[[0," pd\n"],[-1,"import matplotlib\nmatplotlib.use('Agg')\n"],[0,"impo"]],65,65,48,8],[[[0," as plt\n"],[1,""],[0,"\nd = pd."]],93,93,16,16],[[[0,"olor"],[-1,"(d"],[1,"mesh(d[0], d[1], d[2]"],[0,", cm"]],210,210,10,29],[[[0,"cm.hot)\n"],[-1,"#"],[0,"plt.axis"]],248,248,17,16],[[[0,"axis([d["],[-1,"'x'"],[1,"0"],[0,"].min(),"]],260,260,19,17],[[[0,", d["],[-1,"'x'"],[1,"0"],[0,"].ma"]],276,276,11,9],[[[0,"ax(), d["],[-1,"' y'"],[1,"1"],[0,"].min(),"]],284,284,20,17],[[[0,", d["],[-1,"' y'"],[1,"1"],[0,"].ma"]],300,300,12,9],[[[0,"orbar()\n"],[1,"plt.show()\n"],[0,"plt.save"]],322,322,16,27]],"time":1449984592805}
+{"patch":[[[[0,".max()])"],[1,":"],[0,"\nplt.col"]],306,306,16,17]],"time":1449635120537}
+{"patch":[[[[0,".max()])"],[-1,":"],[0,"\nplt.col"]],306,306,17,16]],"time":1449635115627}
+{"patch":[[[[0,"in(), d["],[-1,"1"],[0,"].max()]"]],296,296,17,16]],"time":1449634852613}
+{"patch":[[[[0,"), d"],[-1,"[]"],[0,".max"]],299,299,10,8]],"time":1449634850601}
+{"patch":[[[[0,".min(), "],[-1,"d"],[1,"y"],[0,".max()])"]],294,294,17,17]],"time":1449634848593}
+{"patch":[[[[0,"ax(), d["],[-1,"1"],[0,"].min(),"]],284,284,17,16]],"time":1449634846119}
+{"patch":[[[[0,"), d"],[-1,"[]"],[0,".min"]],287,287,10,8]],"time":1449634844095}
+{"patch":[[[[0,".max(), "],[-1,"d"],[1,"y"],[0,".min(), "]],282,282,17,17]],"time":1449634842090}
+{"patch":[[[[0,"in(), d["],[-1,"0"],[1,"o"],[0,"].max(),"]],272,272,17,17]],"time":1449634837434}
+{"patch":[[[[0,"in(), d["],[-1,"o"],[1,"1"],[0,"].max(),"]],272,272,17,17]],"time":1449634835431}
+{"patch":[[[[0,"in(), d["],[-1,"1]"],[0,".max(), "]],272,272,18,16]],"time":1449634832210}
+{"patch":[[[[0,".min(), "],[-1,"d["],[1,"x"],[0,".max(), "]],270,270,18,17]],"time":1449634830199}
+{"patch":[[[[0,"xis([d[0"],[-1,"]"],[0,".min(), "]],261,261,17,16]],"time":1449634828191}
+{"patch":[[[[0,".axis([d"],[-1,"[0"],[0,".min(), "]],259,259,18,16]],"time":1449634826126}
+{"patch":[[[[0,"t.axis(["],[-1,"d"],[1,"x"],[0,".min(), "]],258,258,17,17]],"time":1449634824113}
+{"patch":[[[[0,"ot)\n"],[-1,"plt.axis([x.min(), x.max(), y.min(), y.max()])"],[0,"\nplt"]],252,252,54,8]],"time":1449634817508}
+{"patch":[[[[0,"cm.hot)\n"],[-1,"\n"],[0,"plt.colo"]],248,248,17,16]],"time":1449634813446}

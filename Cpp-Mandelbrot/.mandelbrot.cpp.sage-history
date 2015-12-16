@@ -1,0 +1,26 @@
+"#include <iostream>\n#include <string>\n#include <sstream>\n#include \"cplane.h\"\n#include \"julia.h\"\n\n#define MAXITER 256\n\nusing namespace std;\n\n// Declare a function\nint iterate(COMPLEX, COMPLEX &);\n \n// Start the main function\nint main(void) {\n \n  // Define variables to receive the inputs and to work later\n  INT i, j, out;\n  INT xpoints, ypoints;\n  VALUE xmin, xmax, ymin, ymax;\n  cplane a;\n\n  // Receive the inputs\n  cout << \"Enter the minimum value for x-axis: \";\n  cin >> xmin;\n  cout << endl;\n  cout << \"Enter the maximum value for x-axis: \";\n  cin >> xmax;\n  cout << endl;\n  cout << \"Enter the minimum value for y-axis: \";\n  cin >> ymin;\n  cout << endl;\n  cout << \"Enter the maximum value for y-axis: \";\n  cin >> ymax;\n  cout << endl;\n  cout << \"Enter the number of points that will be taken in x-axis: \";\n  cin >> xpoints;\n  cout << endl;\n  cout << \"Enter the number of points that will be taken in y-axis: \";\n  cin >> ypoints;\n  cout << endl;\n\n  // Construct the desirable cplane\n  a = constructor(xmin, xmax, ymin, ymax, xpoints, ypoints);\n\n  // Receive and print the output of the iterate function for each element of the cplane\n  cout << \"x, y, out\" << endl;\n  for(i=0; i<ypoints; i++){\n    for(j=0; j<xpoints; j++){\n      out = iterate((0, 0), a.mat(i, j));\n      cout << real(a.mat(i, j)) << \", \" << imag(a.mat(i, j)) << \", \" << out << endl;\n    }\n  }\n\n  // Destruct matrix when done\n  a.mat.clear();\n\n  return 0;\n}\n \n// Iterate the function juliamap\nint iterate(COMPLEX z, COMPLEX &c){\n  INT i, j, n;\n  n=0;\n  while(true){\n    z = juliamap(z, c);\n    n=n+1;\n    if(abs(z)>2){\n      return n;\n    }\n    else if(n>=MAXITER){\n      return 0;\n    }\n  }\n}\n"
+{"patch":[[[[0,"lear"],[-1,"()"],[0,";\n\n "]],1404,1404,10,8]],"time":1450232015094}
+{"patch":[[[[0,".mat.cle"],[-1,"a"],[0,"r;\n\n  re"]],1398,1398,17,16]],"time":1450232013093}
+{"patch":[[[[0,".mat"],[-1,".cler"],[0,";\n\n "]],1398,1398,13,8]],"time":1450232011093}
+{"patch":[[[[0,"done\n  a"],[-1,".mat"],[0,";\n\n  ret"]],1390,1390,20,16]],"time":1450232009092}
+{"patch":[[[[0," done\n  "],[1,"elete "],[0,"a;\n\n  re"]],1389,1389,16,22]],"time":1450232007092}
+{"patch":[[[[0," done\n  "],[1,"d"],[0,"elete a;"]],1389,1389,16,17]],"time":1450232005084}
+{"patch":[[[[0," delete "],[-1,"a"],[0,";\n\n  ret"]],1396,1396,17,16]],"time":1450231919007}
+{"patch":[[[[0,"e\n  dele"],[-1,"te "],[0,";\n\n  ret"]],1393,1393,19,16]],"time":1450231917002}
+{"patch":[[[[0,"done\n  d"],[-1,"ele"],[0,";\n\n  ret"]],1390,1390,19,16]],"time":1450231915001}
+{"patch":[[[[0," done\n  "],[-1,"d"],[1,"free(a.mat)"],[0,";\n\n  ret"]],1389,1389,17,27]],"time":1450231913005}
+{"patch":[[[[0,"(a.mat);"],[1,":"],[0,"\n\n  retu"]],1401,1401,16,17]],"time":1450231494732}
+{"patch":[[[[0,"(a.mat);"],[-1,":"],[0,"\n\n  retu"]],1401,1401,17,16]],"time":1450231492768}
+{"patch":[[[[0,"(a.mat);"],[1,"a =NULL;"],[0,"\n\n  retu"]],1401,1401,16,24]],"time":1450231488729}
+{"patch":[[[[0,"\n  free("],[-1,"a"],[1,"c"],[0,".mat);a "]],1394,1394,17,17]],"time":1450231481931}
+{"patch":[[[[0,"e\n  "],[-1,"free(c.mat);"],[0,"a =N"]],1393,1393,20,8]],"time":1450231476671}
+{"patch":[[[[0," =NU"],[-1,"LL;"],[0,"\n\n  "]],1398,1398,11,8]],"time":1450231388103}
+{"patch":[[[[0,"e\n  a =N"],[-1,"U"],[0,"\n\n  retu"]],1393,1393,17,16]],"time":1450231386107}
+{"patch":[[[[0,"ne\n  a ="],[-1,"N"],[0,"\n\n  retu"]],1392,1392,17,16]],"time":1450231384140}
+{"patch":[[[[0,"one\n  a "],[-1,"="],[0,"\n\n  retu"]],1391,1391,17,16]],"time":1450231382418}
+{"patch":[[[[0,"done\n  a"],[-1," "],[0,"\n\n  retu"]],1390,1390,17,16]],"time":1450231379931}
+{"patch":[[[[0," done\n  "],[-1,"a"],[0,"\n\n  retu"]],1389,1389,17,16]],"time":1450231377931}
+{"patch":[[[[0,"lane a;\n"],[1," "],[0,"\n  // Re"]],382,382,16,17]],"time":1450231272370}
+{"patch":[[[[0,"oints);\n"],[1," "],[0,"\n  // Re"]],1040,1040,16,17]],"time":1450231267735}
+{"patch":[[[[0,"  }\n  }\n"],[1," "],[0,"\n  // De"]],1357,1357,16,17]],"time":1450231261842}
+{"patch":[[[[0,"done\n  \n"],[1," "],[0,"\n  retur"]],1393,1393,16,17]],"time":1450231258203}

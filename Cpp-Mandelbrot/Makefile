@@ -1,9 +1,9 @@
-all: test_cplane
+all: mandelbrot
 
-test_cplane: cplane.o
+mandelbrot: cplane.o julia.o
 
 run: all
-	./test_cplane
+	./mandelbrot
 
 clean:
-	rm -f test_cplane cplane.o
+	rm -f mandelbrot cplane.o julia.o

@@ -1,0 +1,10 @@
+"#include<stdio.h>\n#include\"complex.h\"\n\n// Set a complex number\nvoid set_complex(COMPLEX *c, VALUE a, VALUE b){\n  c->x=a;\n  c->y=b;\n}\n\n// Multiply two complex numbers\nCOMPLEX mult2(COMPLEX *a, COMPLEX *b){\n  COMPLEX z;\n  z.x=(a->x)*(b->x)-(a->y)*(b->y);\n  z.y=(a->x)*(b->y)+(a->y)*(b->x);\n  return z;\n}\n\n// Square a complex number\nCOMPLEX square(COMPLEX *a){\n  return mult2(a,a);\n}\n\n// Add two complex numbers\nCOMPLEX add2(COMPLEX *a, COMPLEX *b){\n  COMPLEX z;\n  z.x=(a->x)+(b->x);\n  z.y=(a->y)+(b->y);\n  return z;\n}\n\n// Apply juliamap to two complex numbers\nCOMPLEX juliamap(COMPLEX *a, COMPLEX *b){\n  COMPLEX c = square(a);\n  return add2(&c,b);\n}\n\n// Output the square of the module of a complex\nVALUE square_mod(COMPLEX *a){\n  return (a->x)*(a->x) + (a->y)*(a->y);\n}\n\n// Print a complex number\nvoid complex_print(COMPLEX *a){\n  if ((a->y)<0){\n    printf(\"%Lf%Lfi\",a->x,a->y);\n  }\n  else{\n    printf(\"%Lf+%Lfi\",a->x,a->y);\n  }\n}\n"
+{"patch":[[[[0,"eturn z;\n}\n\n"],[1,"\n"],[0,"// Apply jul"]],505,505,24,25]],"time":1449090361899}
+{"patch":[[[[0,"n z;\n}\n\n"],[1,"  return ad;\n}"],[0,"\n// Appl"]],509,509,16,30]],"time":1449090359918}
+{"patch":[[[[0,"n z;\n}\n\n"],[1,"X juliamap(COMPLEX *a, COMPLEX *b){\n  COMPLEX c = square(a);\n"],[0,"  return"]],509,509,16,77]],"time":1449090357900}
+{"patch":[[[[0,"n z;\n}\n\n"],[1,"/ Apply juliamap to two complex numbers\nCOMPLE"],[0,"X juliam"]],509,509,16,62]],"time":1449090355888}
+{"patch":[[[[0,"n z;\n}\n\n"],[1,"/"],[0,"/ Apply "]],509,509,16,17]],"time":1449090353876}
+{"patch":[[[[0,"c,b);\n}\n"],[-1,"\n"],[0,"// Outpu"]],763,763,17,16]],"time":1449090349979}
+{"patch":[[[[0,";\n}\n"],[-1,"// Apply juliamap to two complex numbers\nCOMPLEX juliamap(COMPLEX *a, COMPLEX *b){\n  COMPLEX c = square(a);\n  return add2(&c,b);\n}"],[0,"\n// "]],636,636,138,8]],"time":1449090347844}
+{"patch":[[[[0,"eturn ad"],[1,"d2(&c,b"],[0,";\n}\n\n// "]],628,628,16,23]],"time":1449090303830}
+{"patch":[[[[0,"dd2(&c,b"],[1,")"],[0,";\n}\n\n// "]],635,635,16,17]],"time":1449090301833}
