@@ -1,3 +1,0 @@
-{"notebook_name":"2015-12-13-075155.ipynb"}
-"import numpy as np\nimport pandas as pd\nimport matplotlib\nimport matplotlib.pyplot as plt\n\nd = pd.read_csv(\"juliaset.csv\")\n\nsizex=d['x'][d['x']==max(d['x'])].count()\nsizey=d[' y'][d[' y']==max(d[' y'])].count()\nx=np.reshape(d['x'],(sizex,sizex))[0,:].transpose()\ny=np.reshape(d[' y'],(sizey,sizey))[:,0]\nz=np.reshape(d[' out'],(sizey,sizex))\nplt.pcolormesh(x,y,z, cmap = plt.cm.hot)\nplt.colorbar()\nplt.savefig(\"test.jpg\")"︡{"metadata":{"collapsed":false,"trusted":true},"cell_type":"code","execution_count":6,"outputs":[]}
-""︡{"metadata":{"trusted":true,"collapsed":true},"cell_type":"code","execution_count":null,"outputs":[]}
