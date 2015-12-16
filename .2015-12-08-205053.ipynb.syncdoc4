@@ -1,9 +1,0 @@
-{"notebook_name":"2015-12-08-205053.ipynb"}
-"import numpy as np\nimport pandas as pd\nimport matplotlib\n\nimport matplotlib.pyplot as plt\nfrom math import sqrt\n\nd = pd.read_csv(\"juliaset.csv\")\n#d = data.as_matrix()\n"︡{"metadata":{"collapsed":false,"trusted":true},"cell_type":"code","execution_count":2,"outputs":[]}
-""︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":null,"outputs":[]}
-"#x=d[:,0]\n#y=d[:,1]\n#z=d[:,2]\n"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":4,"outputs":[]}
-"#fig=figure()\n\n#plt.pcolormesh(d['x'], d[' y'], d[' out'], cmap = plt.cm.hot)\n#plt.axis([d['x'].min(), d['x'].max(), d[' y'].min(), d[' y'].max()])\n#plt.colorbar()\nplt.savefig(\"test1.jpg\")"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":11,"outputs":[]}
-"x = np.arange(0,11)\ny = np.arange(0,11)\nxv, yv = np.meshgrid(x,y)\nc = np.random.rand(10,10)\n\nplt.pcolormesh(xv,yv,c)\n\nplt.show()"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":null,"outputs":[]}
-"xy=np.linspace(-1,5,6)"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":null,"outputs":[]}
-"xy"︡{"metadata":{"trusted":true,"collapsed":false},"cell_type":"code","execution_count":null,"outputs":[]}
-""︡{"metadata":{"trusted":true,"collapsed":true},"cell_type":"code","execution_count":null,"outputs":[]}
